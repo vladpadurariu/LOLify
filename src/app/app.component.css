@@ -1,0 +1,71 @@
+.container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.sidenav {
+    min-width: 80px;
+}
+
+.side-menu {
+    height: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand {
+    color: orangered;
+    margin-left: 2em;
+    text-shadow: 2px 1px rgb(255, 142, 142);
+    letter-spacing: .4em;
+}
+
+.container .mat-drawer .mat-icon {
+    font-size: 2em;
+    margin-top:1.2em;
+}
+
+.mat-icon:hover {
+    color: orangered;
+    cursor: pointer;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.centered {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+img {
+    height: 100%;
+    width: 64px;
+}
+
+.centered .mat-icon {
+    font-size: 1.3em;
+    text-shadow: 2px 2px rgb(34, 34, 34);
+}
+
+.mat-slider {
+    width: 60%;
+}
+
+
