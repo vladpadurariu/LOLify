@@ -6,6 +6,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Authentication module with login and register components.
 - Routing.
 - Form validation.
+- Added music module
+- Added player, playlists, artists, tracks and genre components
 
 TO DO:
 

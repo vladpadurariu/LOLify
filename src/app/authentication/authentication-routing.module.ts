@@ -15,6 +15,12 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent
+  },
+  {
+    // this needs some configuring
+    path: '**',
+    redirectTo: 'notfound',
+    pathMatch: 'full'
   }
 ];
 
