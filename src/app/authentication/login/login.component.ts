@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-// import { LoginModel } from '../../models/login.model';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+
+import { LoginService } from '../../_services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -9,11 +10,15 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  // user: LoginModel = new LoginModel();
   loginForm: FormGroup;
   hide = true;
+  submitted = false;
+  loading = false;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private loginService: LoginService
+    ) {}
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
@@ -33,7 +38,12 @@ export class LoginComponent implements OnInit {
   get f() { return this.loginForm.controls; }
 
   onLoginSubmit() {
-    console.log(this.loginForm.value);
+    // console.log(this.loginForm.value);
+    this.submitted = true;
+    this.loading = true;
+    const data = this.loginForm.value;
+    // console.log(data);
+    this.loginService.loginUser(data);
   }
 
 }

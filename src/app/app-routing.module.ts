@@ -12,7 +12,31 @@ const routes: Routes = [
     loadChildren: './authentication/authentication.module#AuthenticationModule'
   },
   {
-    path: '',
+    path: 'home',
+    loadChildren: './home/home.module#HomeModule'
+  },
+  {
+    path: 'playlists',
+    loadChildren: './home/home.module#HomeModule'
+  },
+  {
+    path: 'genres',
+    loadChildren: './home/home.module#HomeModule'
+  },
+  {
+    path: 'tracks',
+    loadChildren: './home/home.module#HomeModule'
+  },
+  {
+    path: 'artists',
+    loadChildren: './home/home.module#HomeModule'
+  },
+  {
+    path: 'settings',
+    loadChildren: './home/home.module#HomeModule'
+  },
+  {
+    path: '**',
     redirectTo: '',
     pathMatch: 'full'
   }
@@ -24,8 +48,6 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forRoot(routes)
   ],
-  exports: [
-    RouterModule
-  ]
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,6 +1,6 @@
 {
   "name": "backend",
-  "version": "1.0.0",
+  "version": "1.0.0-beta.10",
   "description": "",
   "main": "server.js",
   "scripts": {
@@ -12,6 +12,10 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.16.4",
+    "nodemon": "^1.18.11",
+    "request": "^2.88.0",
+    "util": "^0.11.1",
+    "versiony": "^2.0.1",
     "xml2js": "^0.4.19"
   }
 }

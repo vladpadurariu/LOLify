@@ -2,7 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthenticationModule } from './authentication/authentication.module';
-import { MusicModule } from './music/music.module';
+import { HomeModule } from './home/home.module';
+import { LoginService } from './_services/login.service';
+import { AuthGuard } from './_services/auth-guard.service';
 
 // Material section
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,16 +25,16 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     HttpClientModule,
     AuthenticationModule,
+    HomeModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
     MatMenuModule,
     MatSidenavModule,
     MatToolbarModule,
-    AppRoutingModule,
-    MusicModule
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [LoginService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
