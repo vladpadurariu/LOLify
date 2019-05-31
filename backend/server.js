@@ -43,7 +43,7 @@ app.post('/login', CORS(), bodyParser.text(), function (req, res) {
   }
 
   this.login = builder.buildObject(loginObj);
-  // console.log(login);
+  console.log(login);
 
   let response = { message: 'POST data passed to backend' }
   res.end(JSON.stringify(response));
@@ -67,7 +67,7 @@ app.get('/login', CORS(), function (req, res) {
         // throw new Error(error);
       } else {
         parser.parseString(response.body, function (err, result) {
-          // console.log(util.inspect(result, false, null));    
+          console.log(util.inspect(result, false, null));    
           // uncomment this ^^^^ line to se the reasons for errors in console.
           let sessionCode = result['ns1:loginUserResponse'].sessionCode[0];
           let userID = result['ns1:loginUserResponse']['configuration'][0].userID[0];
